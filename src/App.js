@@ -1,7 +1,6 @@
 import './App.css';
 import Search from "./Search";
 import Forecast from "./Forecast";
-import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
