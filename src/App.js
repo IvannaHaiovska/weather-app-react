@@ -9,7 +9,7 @@ function App() {
       <h1 className = "text-primary fw-bold text-start"> Weather Forecast </h1> 
       <Search />
       <Forecast />
-        < div className='text-center' > Open-source code, by < a href = "" > Ivanna Haiovska </a> </div >
+        < div className='text-center' > Open-source code, by < a href = "https://github.com/IvannaHaiovska/weather-app-react" > Ivanna Haiovska </a> </div >
       </div>
   );
 }
