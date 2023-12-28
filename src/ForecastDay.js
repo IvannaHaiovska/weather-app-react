@@ -20,7 +20,8 @@ export default function ForecastDay(props) {
     return days[day];
   }
 
-  return (<div>
+  return (
+  <div className="weather-card">
             <h4 className = "mt-4 fw-bolder" >{
          day()
       } </h4>   
@@ -30,7 +31,8 @@ export default function ForecastDay(props) {
     }@2x.png`
       }
       className = "card-img-top m-auto"
-      alt = "" /> < div className = "card-body" >
+      alt = "" /> 
+      <div className = "card-body" >
 < h5 className = "card-title" > {props.data.weather[0].description} </h5>
       <div className="WeatherForecast-temperatures">
         <span className = "WeatherForecast-temperature-max card-text" >

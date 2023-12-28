@@ -22,12 +22,11 @@ export default function Forecast(props) {
     if (loaded) {
         return ( 
             <div className = "extendedForecast border border-primary-subtle rounded mb-5" >
-                < h3 className = "fw-bold mt-5 mb-4 text-start"> Extended Forecast </h3>  
+                <h3 className = "fw-bold mt-5 mb-4 text-start"> Extended Forecast </h3>  
                 <div className = "card-group row-cols-1 row-cols-md-2 g-4" >
              {
                 forecast.map(function (dailyForecast, index) {
-                    if (index < 5) {
-                        return ( <div div className = "card text-center m-3 rounded ms-5 border"
+                        return ( <div className = "card text-center m-3 rounded ms-5 border"
                             key = {
                                 index
                             } >
@@ -36,7 +35,6 @@ export default function Forecast(props) {
                             }
                             /> </div>
                         );
-                    }
                 })
             } 
             </div></div>
