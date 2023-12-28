@@ -43,7 +43,7 @@ function showTemp(response) {
         event.preventDefault();
         setCity(event.target.value);
     }
- if (weatherData.ready) {     console.log(weatherData.coordinates);
+ if (weatherData.ready) {   
      return (
     
         <div> 
@@ -66,7 +66,7 @@ function showTemp(response) {
         < h3 className = "fw-bold text-start" > Current Weather </h3>  
         <p className = "currentDate text-start" >
    
-         < FormatDate date = {
+         <FormatDate date = {
           weatherData.date
           }
           />
@@ -88,7 +88,7 @@ function showTemp(response) {
         }
         /></h2 >
           </div>
-          < p className = "ms-4 fs-6 description" > {
+          <p className = "ms-4 fs-6 description" > {
               weatherData.description
           } </p> </div >
         < div className = "aditionalInfo align-items-center" >

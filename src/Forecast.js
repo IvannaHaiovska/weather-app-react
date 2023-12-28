@@ -27,7 +27,7 @@ export default function Forecast(props) {
              {
                 forecast.map(function (dailyForecast, index) {
                     if (index < 5) {
-                        return ( <div div className = "card text-center m-3 rounded ms-5"
+                        return ( <div div className = "card text-center m-3 rounded ms-5 border"
                             key = {
                                 index
                             } >
@@ -43,7 +43,6 @@ export default function Forecast(props) {
         );
     } else {
         let apiKey = "4b3503b2f08a729413c4d33ef1186004";
-        console.log(props.coordinates);
         let longitude = props.coordinates.lon;
         let latitude = props.coordinates.lat;
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;

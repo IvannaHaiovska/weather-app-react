@@ -49,22 +49,4 @@ export default function FormatDate(props){
  return(
         <div> {day}, {dayNumber} {month} {props.date.getFullYear()}, {hours}:{minutes}</div>
     )
-    
-
-    // function formatDay(timestamp) {
-    //     let now = new Date(timestamp * 1000);
-    //     let day = now.getDay();
-    //     let days = [
-    //         "Sun",
-    //         "Mon",
-    //         "Tue",
-    //         "Wed",
-    //         "Thu",
-    //         "Fri",
-    //         "Sat"
-    //     ];
-
-    //     return days[day];
-    // }
-
  }

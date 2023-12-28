@@ -33,10 +33,10 @@ export default function ForecastDay(props) {
       alt = "" /> < div className = "card-body" >
 < h5 className = "card-title" > {props.data.weather[0].description} </h5>
       <div className="WeatherForecast-temperatures">
-        <span span className = "WeatherForecast-temperature-max card-text" >
+        <span className = "WeatherForecast-temperature-max card-text" >
           {maxTemperature()}
         </span>
-        <span span className = "WeatherForecast-temperature-min card-text" >
+        <span className = "WeatherForecast-temperature-min card-text" >
            / {minTemperature()}
         </span>
       </div>
