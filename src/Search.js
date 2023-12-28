@@ -4,6 +4,8 @@ import React, {
 import axios from "axios";
 import FormatDate from "./FormatDate";
 import WeatherTemp from "./WeatherTemp";
+import Forecast from "./Forecast";
+
 export default function Search(props) {
     const [city, setCity] = useState(props.defaultCity);
 const [weatherData, setWeatherData] = useState({
@@ -41,9 +43,10 @@ function showTemp(response) {
         event.preventDefault();
         setCity(event.target.value);
     }
- if (weatherData.ready) {
+ if (weatherData.ready) {     console.log(weatherData.coordinates);
      return (
-        <div>
+    
+        <div> 
         <form onSubmit = {
             handleSearch
         } >
@@ -57,6 +60,7 @@ function showTemp(response) {
      
          <input type="submit" value="Search"  className = "btn btn-primary searchCityBtn mx-1"/>
         </form>
+      
            <div className = "currentWeatherBlock border border-primary-subtle rounded d-flex justify-content-between mb-5" >
         <div className = "mainInfo" >
         < h3 className = "fw-bold text-start" > Current Weather </h3>  
@@ -127,9 +131,14 @@ function showTemp(response) {
         </div>  </div>  
         </div>  
         </div>  
-        </div>
-           </div>
-    );
+        </div> 
+      <Forecast coordinates = {
+            weatherData.coordinates
+        } />
+           </div> 
+          
+    );  
+   
     } else {
         search();
         return "Loading...";
